@@ -1,0 +1,71 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:9899",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/insert" : {
+      "post" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "post-insert",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/Insert_Auto"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a Response_Inserst_Auto to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Response_Inserst_Auto"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Response_Inserst_Auto" : {
+      "type" : "object",
+      "required" : [ "Messaggio" ],
+      "properties" : {
+        "Messaggio" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Insert_Auto" : {
+      "type" : "object",
+      "required" : [ "surcharge", "model", "optional", "category", "brand" ],
+      "properties" : {
+        "category" : {
+          "type" : "integer"
+        },
+        "brand" : {
+          "type" : "string"
+        },
+        "model" : {
+          "type" : "string"
+        },
+        "optional" : {
+          "type" : "boolean"
+        },
+        "surcharge" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

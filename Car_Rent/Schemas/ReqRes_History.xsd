@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ReqRes_History" xmlns:tns="http://www.example.org/ReqRes_History" elementFormDefault="qualified">
+
+    <element name="Request_History" type="tns:Request_History"></element>
+    
+    <complexType name="Request_History">
+    	<sequence>
+    		<element name="username" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="Response_History" type="tns:Response_History"></element>
+    
+    <complexType name="Response_History">
+    	<sequence>
+    		<element name="from_date" type="date"></element>
+    		<element name="to_date" type="date"></element>
+    		<element name="brand" type="string"></element>
+    		<element name="model" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="Response_History_Array"
+    	type="tns:Response_History_Array">
+    </element>
+    
+    <complexType name="Response_History_Array">
+    	<sequence>
+    		<element name="messaggio" type="string"></element>
+    		<element name="Response_History_Array" type="tns:Response_History" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+</schema>

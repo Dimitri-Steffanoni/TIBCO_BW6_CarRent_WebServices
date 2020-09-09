@@ -1,0 +1,70 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:9899",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/rent" : {
+      "post" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "post-rent",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/Request_Prenotazione_Auto"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a Response_Prenotazione_Auto to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Response_Prenotazione_Auto"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Response_Prenotazione_Auto" : {
+      "type" : "object",
+      "required" : [ "messaggio" ],
+      "properties" : {
+        "messaggio" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Request_Prenotazione_Auto" : {
+      "type" : "object",
+      "required" : [ "from_date", "to_date", "id", "username" ],
+      "properties" : {
+        "username" : {
+          "type" : "string"
+        },
+        "from_date" : {
+          "type" : "string",
+          "format" : "date"
+        },
+        "to_date" : {
+          "type" : "string",
+          "format" : "date"
+        },
+        "id" : {
+          "type" : "integer"
+        }
+      }
+    }
+  }
+}

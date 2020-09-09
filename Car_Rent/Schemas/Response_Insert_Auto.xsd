@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Response_Insert_Auto" xmlns:tns="http://www.example.org/Response_Insert_Auto" elementFormDefault="qualified">
+
+    <element name="Response_Inserst_Auto" type="tns:Insert_Auto"></element>
+    
+    <complexType name="Insert_Auto">
+    	<sequence>
+    		<element name="Messaggio" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

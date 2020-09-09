@@ -1,0 +1,80 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:9899",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/users" : {
+      "post" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "post-users",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/UsersCreation"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a ResponseUser to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/ResponseUser"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "UsersCreation" : {
+      "type" : "object",
+      "required" : [ "zipcode", "password", "city", "surname", "street", "name", "username" ],
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "surname" : {
+          "type" : "string"
+        },
+        "street" : {
+          "type" : "string"
+        },
+        "city" : {
+          "type" : "string"
+        },
+        "zipcode" : {
+          "type" : "string"
+        },
+        "username" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ResponseUser" : {
+      "type" : "object",
+      "required" : [ "Status", "Messaggio" ],
+      "properties" : {
+        "Status" : {
+          "type" : "string"
+        },
+        "Messaggio" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/ReqRes_Ricerca_Auto" elementFormDefault="qualified" targetNamespace="http://www.example.org/ReqRes_Ricerca_Auto">
+
+
+    <element name="Request_Ricerca_Auto" type="tns:Request_Ricerca_Auto">
+    </element>
+    
+    <complexType name="Request_Ricerca_Auto">
+    	<sequence>
+    		<element minOccurs="1" name="username" type="string"/>
+    		<element maxOccurs="1" minOccurs="1" name="from_date" type="date"/>
+    		<element maxOccurs="1" minOccurs="1" name="to_date" type="date"/>
+    		<element maxOccurs="1" minOccurs="0" name="category" type="int"/>
+    	</sequence>
+    </complexType>
+    
+    <element name="Response_Ricerca_Auto" type="tns:Response_Ricerca_Auto">
+    </element>
+    
+    <complexType name="Response_Ricerca_Auto">
+    	<sequence>
+    		<element maxOccurs="1" minOccurs="0" name="brand" type="string"/>
+    		<element maxOccurs="1" minOccurs="0" name="model" type="string"/>
+    		<element maxOccurs="1" minOccurs="0" name="price" type="string"/>
+    	</sequence>
+    </complexType>
+    
+    <element name="Response_Ricerca_Auto_Array" type="tns:Response_Ricerca_Auto_Array">
+    </element>
+    
+    <complexType name="Response_Ricerca_Auto_Array">
+    	<sequence>
+            <element name="Messaggio" type="string"/>
+            <element maxOccurs="unbounded" minOccurs="0" ref="tns:Response_Ricerca_Auto">
+    		</element>
+    	</sequence>
+    </complexType>
+    <complexType name="Response_Ricerca_Auto_ArrayArray">
+    <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" name="Response_Ricerca_Auto_Array" type="tns:Response_Ricerca_Auto_Array"/>
+    </sequence>
+  </complexType>
+    <element name="Response_Ricerca_Auto_ArrayArray" type="tns:Response_Ricerca_Auto_ArrayArray"/>
+</schema>

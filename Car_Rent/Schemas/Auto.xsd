@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Insert_Auto" xmlns:tns="http://www.example.org/Insert_Auto" elementFormDefault="qualified">
+
+    <element name="Insert_Auto" type="tns:Insert_Auto"></element>
+
+    <complexType name="Insert_Auto">
+    	<sequence>
+    		<element name="category" type="int"></element>
+    		<element name="brand" type="string"></element>
+    		<element name="model" type="string"></element>
+    		<element name="optional" type="boolean"></element>
+    		<element name="surcharge" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

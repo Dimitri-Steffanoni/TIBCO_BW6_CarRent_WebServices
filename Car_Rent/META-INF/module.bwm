@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_EfswYO60Eeq06v0tVp-TXQ" targetNamespace="http://tns.tibco.com/bw/composite/Car_Rent" name="Car_Rent" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_zFUmYO7CEeqqkNr7isDnjQ" name="users" promote="ComponentUsers/users">
+    <sca:interface.wsdl xmi:id="_zFY30O7CEeqqkNr7isDnjQ" interface="http://xmlns.example.com/20200904154053PLT#wsdl.interface(users1)" scaext:wsdlLocation="../Processes/car_rent/Users.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_zFdwUO7CEeqqkNr7isDnjQ" name="RestService" path="/users" docBasePath="http://localhost:7777/Car_Rent" docResourcePath="Users" basePath="/" connector="car_rent.Users" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/car_rent.Users-Users.json">
+      <operation xmi:id="_zFeXYO7CEeqqkNr7isDnjQ" operationName="post" nickname="post-users" httpMethod="POST" responseStyle="element" requestStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_zFgMkO7CEeqqkNr7isDnjQ"/>
+      <advancedConfig xmi:id="_zFdwUe7CEeqqkNr7isDnjQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_zFeXYe7CEeqqkNr7isDnjQ" bindingName="RestService"/>
+  </sca:service>
+  <sca:service xmi:id="_rbxTVPDsEeqOe6KVtObeUw" name="insert" promote="ComponentInsert_Auto/insert">
+    <sca:interface.wsdl xmi:id="_rbxTWPDsEeqOe6KVtObeUw" interface="http://xmlns.example.com/20200907112950PLT#wsdl.interface(insert)" scaext:wsdlLocation="../Processes/car_rent/Insert_Auto.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_rbxTWfDsEeqOe6KVtObeUw" name="RestService1" path="/insert" docBasePath="http://localhost:7777/Car_Rent" docResourcePath="Insert_Auto" basePath="/" connector="car_rent.Users" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/car_rent.Insert_Auto-Insert_Auto.json">
+      <operation xmi:id="_rbxTW_DsEeqOe6KVtObeUw" operationName="post" nickname="post-insert" httpMethod="POST" responseStyle="element" requestStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_rbxTXfDsEeqOe6KVtObeUw"/>
+      <advancedConfig xmi:id="_rbxTWvDsEeqOe6KVtObeUw" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_rbxTXPDsEeqOe6KVtObeUw" bindingName="RestService1"/>
+  </sca:service>
+  <sca:service xmi:id="_44aXQvDvEeqOe6KVtObeUw" name="check" promote="ComponentRicerca_Auto/check">
+    <sca:interface.wsdl xmi:id="_44aXRvDvEeqOe6KVtObeUw" interface="http://xmlns.example.com/20200907115249PLT#wsdl.interface(check)" scaext:wsdlLocation="../Processes/car_rent/Ricerca_Auto.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_44aXR_DvEeqOe6KVtObeUw" name="RestService2" path="/check" docBasePath="http://localhost:7777/Car_Rent" docResourcePath="Ricerca_Auto" basePath="/" connector="car_rent.Users" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/car_rent.Ricerca_Auto-Ricerca_Auto.json">
+      <operation xmi:id="_44aXSfDvEeqOe6KVtObeUw" operationName="post" nickname="post-check" httpMethod="POST" responseStyle="element" requestStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_44aXS_DvEeqOe6KVtObeUw"/>
+      <advancedConfig xmi:id="_44aXSPDvEeqOe6KVtObeUw" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_44aXSvDvEeqOe6KVtObeUw" bindingName="RestService2"/>
+  </sca:service>
+  <sca:service xmi:id="_7OWP4PEbEeqmubX00Z9HoQ" name="rent" promote="ComponentPrenotazione_Auto/rent">
+    <sca:interface.wsdl xmi:id="_7OcWgPEbEeqmubX00Z9HoQ" interface="http://xmlns.example.com/20200907170802PLT#wsdl.interface(rent)" scaext:wsdlLocation="../Processes/car_rent/Prenotazione_Auto.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_7OidIPEbEeqmubX00Z9HoQ" name="RestService3" path="/rent" docBasePath="http://localhost:7777/Car_Rent" docResourcePath="Prenotazione_Auto" basePath="/" connector="car_rent.Users" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/car_rent.Prenotazione_Auto-Prenotazione_Auto.json">
+      <operation xmi:id="_7OjEMPEbEeqmubX00Z9HoQ" operationName="post" nickname="post-rent" httpMethod="POST" responseStyle="element" requestStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_7OlgcPEbEeqmubX00Z9HoQ"/>
+      <advancedConfig xmi:id="_7OidIfEbEeqmubX00Z9HoQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_7OjEMfEbEeqmubX00Z9HoQ" bindingName="RestService3"/>
+  </sca:service>
+  <sca:service xmi:id="_htyzQPHKEeqQJO8D4XnUlg" name="history" promote="ComponentHistory/history">
+    <sca:interface.wsdl xmi:id="_ht5g8PHKEeqQJO8D4XnUlg" interface="http://xmlns.example.com/20200908135753PLT#wsdl.interface(history)" scaext:wsdlLocation="../Processes/car_rent/History.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_ht9LUPHKEeqQJO8D4XnUlg" name="RestService4" path="/history" docBasePath="http://localhost:7777/Car_Rent" docResourcePath="History" basePath="/" connector="car_rent.Users" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/car_rent.History-History.json">
+      <operation xmi:id="_ht-ZcPHKEeqQJO8D4XnUlg" operationName="post" nickname="post-history" httpMethod="POST" responseStyle="element" requestStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_huA1sPHKEeqQJO8D4XnUlg"/>
+      <advancedConfig xmi:id="_ht9yYPHKEeqQJO8D4XnUlg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_ht_AgPHKEeqQJO8D4XnUlg" bindingName="RestService4"/>
+  </sca:service>
+  <sca:service xmi:id="_ZEv9BPHOEeqQJO8D4XnUlg" name="history_get" promote="ComponentHistory_Get/history_get">
+    <sca:interface.wsdl xmi:id="_ZEv9CPHOEeqQJO8D4XnUlg" interface="http://xmlns.example.com/20200908142533PLT#wsdl.interface(history_get)" scaext:wsdlLocation="../Processes/car_rent/History_Get.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_ZEv9CfHOEeqQJO8D4XnUlg" name="RestService5" path="/history_get/{username}" docBasePath="http://localhost:7777/Car_Rent" docResourcePath="History_Get" basePath="/" connector="car_rent.Users" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/car_rent.History_Get-History_Get.json">
+      <operation xmi:id="_ZEv9C_HOEeqQJO8D4XnUlg" operationName="get" nickname="get-history_get" httpMethod="GET" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_m6zY8PHxEeqJtoFLoeElKQ">
+        <parameterMapping xmi:id="_m6zY8fHxEeqJtoFLoeElKQ" parameterName="username" parameterType="Path" required="true"/>
+      </parameters>
+      <advancedConfig xmi:id="_ZEv9CvHOEeqQJO8D4XnUlg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_ZEv9DPHOEeqQJO8D4XnUlg" bindingName="RestService5"/>
+  </sca:service>
+  <sca:service xmi:id="_K7AV8PHgEeqJtoFLoeElKQ" name="resource" promote="ComponentResource/resource">
+    <sca:interface.wsdl xmi:id="_K7F1gPHgEeqJtoFLoeElKQ" interface="http://xmlns.example.com/20200908163249PLT#wsdl.interface(resource)" scaext:wsdlLocation="../Processes/car_rent/Resource.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_K7Jf4PHgEeqJtoFLoeElKQ" name="RestService6" path="/resource" docBasePath="http://localhost:7777/Car_Rent" docResourcePath="Resource" basePath="/" connector="car_rent.Users" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/car_rent.Resource-Resource.json">
+      <operation xmi:id="_K7KG8PHgEeqJtoFLoeElKQ" operationName="post" nickname="post-resource" httpMethod="POST" responseStyle="element" requestStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_K7L8IPHgEeqJtoFLoeElKQ"/>
+      <advancedConfig xmi:id="_K7Jf4fHgEeqJtoFLoeElKQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_K7KG8fHgEeqJtoFLoeElKQ" bindingName="RestService6"/>
+  </sca:service>
+  <sca:property xmi:id="_FF-GMO60Eeq06v0tVp-TXQ" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FGJFUO60Eeq06v0tVp-TXQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FGMvsO60Eeq06v0tVp-TXQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FGPzAO60Eeq06v0tVp-TXQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FGUrgO60Eeq06v0tVp-TXQ" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FGXu0O60Eeq06v0tVp-TXQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FGbZMO60Eeq06v0tVp-TXQ" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FGgRsO60Eeq06v0tVp-TXQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FGjVAO60Eeq06v0tVp-TXQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_QNDvYO60Eeq06v0tVp-TXQ" name="ComponentUsers" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_QNDvYe60Eeq06v0tVp-TXQ" processName="car_rent.Create_User"/>
+    <sca:service xmi:id="_zFSKIO7CEeqqkNr7isDnjQ" name="users">
+      <sca:interface.wsdl xmi:id="_zFSxMO7CEeqqkNr7isDnjQ" interface="http://xmlns.example.com/20200904154053PLT#wsdl.interface(users1)" scaext:wsdlLocation="../Processes/car_rent/Users.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_rbxTUPDsEeqOe6KVtObeUw" name="ComponentInsert_Auto" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_rbxTUfDsEeqOe6KVtObeUw" processName="car_rent.Insert_Auto"/>
+    <sca:service xmi:id="_rbxTUvDsEeqOe6KVtObeUw" name="insert">
+      <sca:interface.wsdl xmi:id="_rbxTU_DsEeqOe6KVtObeUw" interface="http://xmlns.example.com/20200907112950PLT#wsdl.interface(insert)" scaext:wsdlLocation="../Processes/car_rent/Insert_Auto.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_44RNUPDvEeqOe6KVtObeUw" name="ComponentRicerca_Auto" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_44RNUfDvEeqOe6KVtObeUw" processName="car_rent.Ricerca_Auto"/>
+    <sca:service xmi:id="_44aXQPDvEeqOe6KVtObeUw" name="check">
+      <sca:interface.wsdl xmi:id="_44aXQfDvEeqOe6KVtObeUw" interface="http://xmlns.example.com/20200907115249PLT#wsdl.interface(check)" scaext:wsdlLocation="../Processes/car_rent/Ricerca_Auto.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_7ONtAPEbEeqmubX00Z9HoQ" name="ComponentPrenotazione_Auto" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_7ONtAfEbEeqmubX00Z9HoQ" processName="car_rent.Prenotazione_Auto"/>
+    <sca:service xmi:id="_7OSlgPEbEeqmubX00Z9HoQ" name="rent">
+      <sca:interface.wsdl xmi:id="_7OTzoPEbEeqmubX00Z9HoQ" interface="http://xmlns.example.com/20200907170802PLT#wsdl.interface(rent)" scaext:wsdlLocation="../Processes/car_rent/Prenotazione_Auto.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_htssoPHKEeqQJO8D4XnUlg" name="ComponentHistory" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_htssofHKEeqQJO8D4XnUlg" processName="car_rent.History"/>
+    <sca:service xmi:id="_htwXAPHKEeqQJO8D4XnUlg" name="history">
+      <sca:interface.wsdl xmi:id="_htw-EPHKEeqQJO8D4XnUlg" interface="http://xmlns.example.com/20200908135753PLT#wsdl.interface(history)" scaext:wsdlLocation="../Processes/car_rent/History.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_ZEv9APHOEeqQJO8D4XnUlg" name="ComponentHistory_Get" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_ZEv9AfHOEeqQJO8D4XnUlg" processName="car_rent.History_Get"/>
+    <sca:service xmi:id="_ZEv9AvHOEeqQJO8D4XnUlg" name="history_get">
+      <sca:interface.wsdl xmi:id="_ZEv9A_HOEeqQJO8D4XnUlg" interface="http://xmlns.example.com/20200908142533PLT#wsdl.interface(history_get)" scaext:wsdlLocation="../Processes/car_rent/History_Get.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_K65oQPHgEeqJtoFLoeElKQ" name="ComponentResource" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_K65oQfHgEeqJtoFLoeElKQ" processName="car_rent.Remove_Auto"/>
+    <sca:service xmi:id="_K68rkPHgEeqJtoFLoeElKQ" name="resource">
+      <sca:interface.wsdl xmi:id="_K695sPHgEeqJtoFLoeElKQ" interface="http://xmlns.example.com/20200908163249PLT#wsdl.interface(resource)" scaext:wsdlLocation="../Processes/car_rent/Resource.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

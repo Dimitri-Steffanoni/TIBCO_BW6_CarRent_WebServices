@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ResponseUserCreation" xmlns:tns="http://www.example.org/ResponseUserCreation" elementFormDefault="qualified">
+
+    <element name="ResponseUser" type="tns:ResponseUser"></element>
+
+    <complexType name="ResponseUser">
+    	<sequence>
+    		<element name="Status" type="string"></element>
+    		<element name="Messaggio" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

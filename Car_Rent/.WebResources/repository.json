@@ -1,0 +1,41 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [
+        {
+            "location": "Service Descriptors/car_rent.Create_User-Users.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/car_rent.Insert_Auto-Insert_Auto.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/car_rent.Ricerca_Auto-Ricerca_Auto.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/car_rent.Prenotazione_Auto-Prenotazione_Auto.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/car_rent.History-History.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/car_rent.History_Get-History_Get.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/car_rent.Resource-Resource.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/car_rent.Remove_Auto-Resource.json",
+            "type": "generated"
+        }
+    ]
+}

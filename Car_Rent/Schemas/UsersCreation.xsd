@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Users" xmlns:tns="http://www.example.org/Users" elementFormDefault="qualified">
+
+    <element name="UsersCreation" type="tns:User"></element>
+
+    <complexType name="User">
+    	<sequence>
+    		<element name="name" type="string"></element>
+    		<element name="surname" type="string"></element>
+    		<element name="street" type="string"></element>
+    		<element name="city" type="string"></element>
+    		<element name="zipcode" type="string"></element>
+    		<element name="username" type="string"></element>
+    		<element name="password" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

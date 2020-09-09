@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ReqRes_Remove_Auto" xmlns:tns="http://www.example.org/ReqRes_Remove_Auto" elementFormDefault="qualified">
+
+    <element name="Request_Remove_Auto" type="tns:Request_Remove_Auto"></element>
+
+    <complexType name="Request_Remove_Auto">
+    	<sequence>
+    		<element name="id" type="int"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="Response_Remove_Auto" type="tns:Response_Remove_Auto"></element>
+
+    <complexType name="Response_Remove_Auto">
+    	<sequence>
+    		<element name="messaggio" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

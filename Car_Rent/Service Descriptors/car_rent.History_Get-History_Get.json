@@ -1,0 +1,55 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:9899",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/history_get/{username}" : {
+      "get" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "get-history_get",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "username",
+          "in" : "path",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a Response_History_Array to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Response_History_Array"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Response_History_Array" : {
+      "type" : "object",
+      "required" : [ "messaggio" ],
+      "properties" : {
+        "messaggio" : {
+          "type" : "string"
+        },
+        "Response_History_Array" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Response_History_Array",
+            "uniqueItems" : false
+          }
+        }
+      }
+    }
+  }
+}

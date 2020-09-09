@@ -1,0 +1,37 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/Car_Rent/Service Descriptors/car_rent.Insert_Auto-Insert_Auto.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/Insert_Auto"
+    },
+    {
+        "jsonSchemaLocation": "/Car_Rent/Service Descriptors/car_rent.Insert_Auto-Insert_Auto.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/Response_Insert_Auto"
+    },
+    {
+        "jsonSchemaLocation": "/Car_Rent/Service Descriptors/car_rent.Ricerca_Auto-Ricerca_Auto.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/ReqRes_Ricerca_Auto"
+    },
+    {
+        "jsonSchemaLocation": "/Car_Rent/Service Descriptors/car_rent.Prenotazione_Auto-Prenotazione_Auto.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/ReqRes_Prenotazione_Auto"
+    },
+    {
+        "jsonSchemaLocation": "/Car_Rent/Service Descriptors/car_rent.History-History.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/ReqRes_History"
+    },
+    {
+        "jsonSchemaLocation": "/Car_Rent/Service Descriptors/car_rent.History_Get-History_Get.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/ReqRes_History"
+    },
+    {
+        "jsonSchemaLocation": "/Car_Rent/Service Descriptors/car_rent.Resource-Resource.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/ReqRes_Remove_Auto"
+    }
+]}
